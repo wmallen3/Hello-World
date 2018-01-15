@@ -1,0 +1,25 @@
+#! /usr/bin/env ruby
+
+# Simple make executable
+
+PATH_TO_ME  = File.expand_path(__FILE__);
+REPOSITORY  = File.dirname(PATH_TO_ME);
+
+JAVAC       = "/usr/bin/javac"
+JAVA        = "/usr/bin/java"
+SOURCES     = Array.new(["#{REPOSITORY}/HelloLicenseWorld.java"]) 
+
+failed      = false
+
+# Compile and Run
+SOURCES.each do |source|
+    if (system("#{JAVAC}", source))
+        system("#{JAVA}", File.basename(source.sub(".java", "")))
+    else
+        failed = true
+    end
+end
+
+if failed then exit(1) end
+
+exit(0)
