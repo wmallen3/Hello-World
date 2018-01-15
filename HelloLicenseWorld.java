@@ -1,12 +1,12 @@
 /*
  * Java - Demo Program
  * Bill Allen, January 15, 2018
- * /
+ */
  
-class HelloLicensedWorld {
-      String BSD_License = "2-Clause License\n" +
+class HelloLicenseWorld {
+    static String BSD_License = "2-Clause License\n" +
     "\n" +
-    "Copyright (c) 2018, wmallen3\n" +
+    "Copyright (c) 2018, William Allen\n" +
     "All rights reserved.\n" +
     "\n" +
     "Redistribution and use in source and binary forms, with or without\n" +
